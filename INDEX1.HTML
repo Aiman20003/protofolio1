@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+      transition: all .3s;
+    }
+    
+    pre {
+      display: inline;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      
+      &.dark {
+        color: #ccc;
+        background-color: #222;
+      }
+      
+      &.teal {
+        background-color: hwb(0 95% 4%);
+        background: url(https://i.imgur.com/NWzvJmm.png) repeat #fff;
+      }
+      
+    }
+    
+    
+    .wrapper {
+      width: 90vw;
+      margin: 0 auto;
+      overflow: hidden;
+      
+    
+    }
+    
+    .switcher {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 2em;
+      flex-wrap: wrap;
+      
+      h2 {
+        .teal & {
+          opacity: 0;
+        }
+      }
+    }
+    
+    .button {
+      background-color: #4B7094;
+      color: white;
+      border: 0;
+      padding: 1em;
+      border-radius: 4px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1em;
+      height: 3em;
+      line-height: 1em;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: #333;
+      }
+      
+      &.theme1 {
+        background-color: #ddd;
+        color: #4B7094; 
+        
+        &:hover {
+          background-color: #eee;
+          color: #666;
+        }
+      }
+      
+      &.theme3 {
+        background-color: transparent;
+        border: 1px solid #666;
+        color: #000; 
+        
+        &:hover {
+          background-color: #eee;
+          color: #666;
+        }
+        
+        .dark & {
+          color: #fff;
+        }
+      }
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body> 
+    <main>
+    <div class="header">
+        <div class="logo">
+        </div>
+     <div class="foremenu">
+     <ul>
+        <li><a class="iconlink" href="home.html"><b><i>HOME</i></b></a></li>
+
+
+        <li><a class="iconlink" href="about us.html"><b><i>ABOUT</i></b></a></li>
+
+
+        <li><a class="iconlink" href="#Product"> <b><i>PRODUCT</i></b></a></li>
+
+
+        <li><a class="iconlink" href="#Contact"><b><i>CONTACT</i></b></a></li>
+
+        
+        <li><a class="iconlink" href="gallery.html"><b><i>GALLERY</i></b></a></li>
+        
+
+        <li><a class="iconlink" href="#Services"><b><i>SERVICES</i></b></a></li>
+         
+    </div>
+    <div class="switcher">
+      <h2>Ready to Switch Themes.</h2>
+      <div class="buttonContainer">
+        <button class=" button theme1">Light Theme</button>
+        <button class="button theme2">Dark Theme</button>
+        <button class="button theme3">InvisiTheme</button>
+      </div>
+    </div>
+    </ul>
+</div>
+<script>
+    var body = document.querySelector("body"), 
+  goLight = function() { 
+    body.className = "";
+  },
+  goDark = function() { 
+    body.className = "";
+    body.classList.add("dark");
+  },
+  goTeal = function() {
+      body.className = "";
+      body.classList.add("teal");
+    }
+
+document.querySelector(".theme1").addEventListener("click", goLight, false); 
+document.querySelector(".theme2").addEventListener("click", goDark, false);
+
+document.querySelector(".theme3").addEventListener("click", goTeal, false);
+
+
+var switchee = document.querySelector(".bonus__header"),
+  switchButton = document.querySelector(".submit"),
+   switcher = document.querySelector(".newText"),
+   replaceText = function() {
+    var switcherText = document.querySelector(".newText").value;
+    switchee.innerHTML = switcherText;
+ };
+
+switchButton.addEventListener("click", replaceText, false); 
+var switchImmediately = function() {
+  switcher.addEventListener("keyup", replaceText, false); 
+};
+
+switchImmediately(); 
+</script>
+<div class="text">
+    <b><i><center><h1>EVENT PLANNER</h1></center></i></b>
+    
+    <b><i><h2><center>MAKE YOUR DAY MEMORABLE WITH US</center></h2></i></b> 
+</div>          
+</div>
+</main>
+<br><br><br><br>
+<div class="container">
+    <div class="gallery2">
+        <div class="img-box"><h3>BIRTHDAY</h3></div>
+        <div class="img-box"><h3>MEHANDI</h3></div>
+        <div class="img-box"><h3>WEDDING</h3></div>
+        <div class="img-box"><h3>COPERATE EVENTS</h3></div>
+    </div>
+    
+</div>
+<br><br><br><br>
+<div class="gallery">
+    <img src="pictures/WEDDING.jpg" alt="">
+    <br><br><br>
+    <div class="text3">
+        <h3><center>WEDDINGS</center></h3>
+        <br>
+        <p2>Wedding is not a day its an emotion for those who play any role in this event and our wedding planners know how to make these emotions memorable
+            
+        </p2>
+    </div>
+ </div>  
+ <div class="gallery">
+    <img src="services/birthday 2.jpg" alt="">
+    <br><br>
+    <div class="text3">
+        <h3><center>BIRTHDAY</center></h3>
+        <br>
+        <p2>We provide complete Birthday services with food and decor. 
+
+        </p2>
+        </div>
+        </div>
+        <div class="gallery">
+            <img src="pictures/images (1).jfif" alt="">
+            <br><br><br>
+            <div class="text3">
+                <h3><center>COOPERATE EVENT</center></h3>
+                <br>
+                <p2>Since 2006, Evento is elevating standards of event planning in corporate and private sectors of Pakistan and working with famous multinational and national brands.
+                    
+                </p2>
+            </div>
+         </div>  
+    </div>
+ </div>  
+</div>
+
+
+    
+            
+
+
+   
+
+</body>
+</html>
